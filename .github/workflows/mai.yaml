@@ -1,5 +1,5 @@
 name: list files and directories
-on: [push] 
+on: [push, pull_request, workflow_dispatch] 
 jobs:
   list-files:
     runs-on: ubuntu-latest
@@ -11,5 +11,4 @@ jobs:
         run: |
             ls -lart
             echo "Files and directories listed successfully."
-            touch success.txt
-   
+            
