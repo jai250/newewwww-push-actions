@@ -1,6 +1,6 @@
 # pass data betwwen jobs in GitHub Actions
 
-name: pass data between jobs demo
+name: pass-data-between-jobs-demo
 on: [ workflow_dispatch, push ]
 jobs:
    job1:
