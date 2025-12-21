@@ -1,7 +1,7 @@
 # pass data betwwen jobs in GitHub Actions
 
 name: pass-data-between-jobs-demo
-on: [ workflow_dispatch, push ]
+on: [ workflow_dispatch ]
 jobs:
    job1:
       runs-on: ubuntu-latest
