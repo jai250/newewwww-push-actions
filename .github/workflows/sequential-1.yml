@@ -1,8 +1,6 @@
 name: sequential-1 jobs demo
 on:
-    push:
-      branches:
-        - main
+   
 
     workflow_dispatch:
 jobs:
