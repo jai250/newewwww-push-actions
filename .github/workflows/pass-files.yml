@@ -4,7 +4,7 @@ name: pass files btw jobs
 on: [ push, workflow_dispatch ]
 jobs:
    job1: 
-      runs-on: ubunutu-latest
+      runs-on: ubuntu-latest
       steps:
         - name: creating a files
           run: echo "123445" > file1.txt
