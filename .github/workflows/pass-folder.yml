@@ -13,7 +13,7 @@ jobs:
               uses: actions/upload-artifact@v4
               with:
                   name: sample-folder
-                  path: sample-folder
+                  path: sample-folder/sample.txt
 
 
     job2:
