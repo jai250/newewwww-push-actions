@@ -5,7 +5,6 @@ on:
             select-job:
                 description: 'Select the job to run (job1, job2, job3, all)'
                 required: true
-                default: 'job1'
                 type: choice
                 options:
                     - job1
