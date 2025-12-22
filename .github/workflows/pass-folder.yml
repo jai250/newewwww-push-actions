@@ -13,7 +13,7 @@ jobs:
               uses: actions/upload-artifact@v4
               with:
                   name: sample-folder
-                  path: sample-folder/
+                  path: sample-folder/sample.txt
 
 
     job2:
@@ -26,4 +26,4 @@ jobs:
                   name: sample-folder
 
             - name: display file content
-              run: cat ./sample-folder/sample.txt  
+              run: cat sample.txt  
