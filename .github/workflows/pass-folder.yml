@@ -1,17 +1,19 @@
-name: pass files btx jobs github actions
+name: pass folders btx jobs github actions
 on: [ push, workflow_dispatch ]
 jobs:
     job1:
         runs-on: ubuntu-latest
         steps:
             - name: creating files
-              run: echo "This is a sample file content" > sample.txt
+              run: |
+                  mkdir sample-folder
+                  echo "This is a sample file content" > sample-folder/sample.txt
 
             - name: upload files
               uses: actions/upload-artifact@v4
               with:
-                  name: sample-file
-                  path: sample.txt
+                  name: sample-folder
+                  path: sample-folder
 
 
     job2:
@@ -21,7 +23,7 @@ jobs:
             - name: download files
               uses: actions/download-artifact@v4
               with:
-                  name: sample-file
+                  name: sample-folder
 
             - name: display file content
-              run: cat sample.txt              
+              run: cat sample-folder/sample.txt  
