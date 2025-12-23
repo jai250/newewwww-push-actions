@@ -16,8 +16,6 @@ jobs:
       - name: Run custom action demo-1
         uses: ./.github/actions/demo-1
         id: demo1
-        with:
-          example_input: "jai"
+      
 
-      - name: Display action output
-        run: echo "The action output was:${{ steps.demo1.outputs.example_output }}"
+     
