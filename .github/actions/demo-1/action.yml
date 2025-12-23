@@ -1,0 +1,26 @@
+name: custom action demo-1
+description: 'This is a custom GitHub Action demo-1'
+inputs:
+  example_input:
+    description: 'An example input for the custom action'
+    required: false
+    default: world
+outputs:
+  example_output:
+    description: 'An example output from the custom action'
+    value: ${{ steps.example_step.outputs.message }}
+runs:
+  using: 'composite' 
+  steps:
+    - id: example_step
+      run: echo "Hello, ${{ inputs.example_input }}!" 
+      shell: bash
+      
+
+    - name: set output
+      run: echo "message= action successful" >> $GITHUB_OUTPUT
+      shell: bash
+
+    
+
+

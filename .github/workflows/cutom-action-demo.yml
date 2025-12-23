@@ -1,0 +1,23 @@
+name: action workflow demo  
+on: 
+  push:
+    branches:
+      - main 
+
+  workflow_dispatch:
+    
+jobs:
+  demo-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run custom action demo-1
+        uses: ./.github/actions/demo-1
+        id: demo1
+        with:
+          example_input: "jai"
+
+      - name: Display action output
+        run: echo "The action output was:${{ steps.demo1.outputs.example_output }}"
